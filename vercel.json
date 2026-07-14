@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/app.js"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "frontend/admin/$1"
+    },
+    {
+      "src": "/member/(.*)",
+      "dest": "frontend/member/$1"
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "uploads/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/admin/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
