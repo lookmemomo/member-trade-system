@@ -6,26 +6,22 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/app.js"
+      "source": "/api/(.*)",
+      "destination": "/backend/app.js"
     },
     {
-      "src": "/admin/(.*)",
-      "dest": "frontend/admin/$1"
+      "source": "/admin/(.*)",
+      "destination": "/frontend/admin/$1"
     },
     {
-      "src": "/member/(.*)",
-      "dest": "frontend/member/$1"
+      "source": "/member/(.*)",
+      "destination": "/frontend/member/$1"
     },
     {
-      "src": "/uploads/(.*)",
-      "dest": "uploads/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/admin/index.html"
+      "source": "/(.*)",
+      "destination": "/frontend/admin/index.html"
     }
   ],
   "env": {
