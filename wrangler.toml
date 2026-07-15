@@ -1,0 +1,9 @@
+name = "member-trade-system"
+type = "pages"
+
+[build]
+command = "mkdir -p public/admin public/member && cp -r frontend/admin/* public/admin/ && cp -r frontend/member/* public/member/ && cp frontend/_redirects public/_redirects"
+output_dir = "public"
+
+[pages]
+build_output_dir = "public"
