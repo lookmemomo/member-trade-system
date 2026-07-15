@@ -1,4 +1,3 @@
 /admin/* /admin/index.html 200
 /member/* /member/index.html 200
-/api/* https://your-backend-url.onrender.com/api/:splat 200
 /* /admin/index.html 200
