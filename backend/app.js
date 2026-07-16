@@ -30,10 +30,8 @@ app.use((req, res) => {
   res.status(404).json({ code: 404, message: '接口不存在' });
 });
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(port, () => {
-    console.log(`会员积分交易站系统后端服务启动成功，端口: ${port}`);
-  });
-}
+app.listen(port, () => {
+  console.log(`会员积分交易站系统后端服务启动成功，端口: ${port}`);
+});
 
 module.exports = app;
