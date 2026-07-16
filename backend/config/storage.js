@@ -1,10 +1,10 @@
 require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
-);
+const SUPABASE_URL = process.env.SUPABASE_URL || 'https://pwfgmesjakmcemubnjrx.supabase.co';
+const SUPABASE_KEY = process.env.SUPABASE_KEY || 'sb_publishable_yqu64_Ll0rEHp-2WX8k3ww_iuX_laNB';
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 async function uploadFile(bucketName, fileName, fileBuffer, mimeType) {
   const { data, error } = await supabase.storage

@@ -1,7 +1,8 @@
 require('dotenv').config();
 const pgp = require('pg-promise')();
 
-const db = pgp(process.env.DATABASE_URL);
+const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://postgres:lmh79426719@db.pwfgmesjakmcemubnjrx.supabase.co:5432/postgres';
+const db = pgp(DATABASE_URL);
 
 async function initDatabase() {
     try {
