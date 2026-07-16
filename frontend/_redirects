@@ -1,3 +1,4 @@
+/api/* https://member-trade-system-production.up.railway.app/api/:splat 200
 /admin/* /admin/index.html 200
 /member/* /member/index.html 200
 /* /admin/index.html 200
