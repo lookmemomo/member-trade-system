@@ -1,0 +1,9 @@
+{
+  "name": "member-trade-system",
+  "version": "1.0.0",
+  "description": "会员积分交易站系统",
+  "scripts": {
+    "start": "cd backend && npm install && node app.js"
+  },
+  "dependencies": {}
+}
